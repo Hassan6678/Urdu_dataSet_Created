@@ -94,14 +94,11 @@ def create_simple(image):
 def Shear(original_image, angle, shear):
     print("Shear_funtion")
     # Parameters of the affine transform:
-    #angle = 35  # Angle in degrees.
-    #shear = 0.3
     translation = 5
 
     type_border = cv.BORDER_CONSTANT
     color_border = (0, 0, 0)
 
-    #original_image = cv.imread(name)
     rows, cols, ch = original_image.shape
 
     # First: Necessary space for the rotation
