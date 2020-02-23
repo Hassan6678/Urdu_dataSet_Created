@@ -138,14 +138,14 @@ def create_noise(data):
     take_even_file = 0
     # Now take Salt and Paper Noise on 46 Picture and Total Image Array = 92(Data)
     for item_1 in range(len(data)):
-        if take_even_file % 2 != 0:
+        if take_even_file % 3 == 0:
             img = data[item_1]
             img = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
             sp = Noise.sp_noise(img, 0.05)  # Black Salt pepper
             noisy_data.append(sp)
         take_even_file += 1
     for item_2 in range(len(data)):
-        if take_even_file % 2 == 0:  # This take only Half Pictures from Folder
+        if take_even_file % 3 == 1:  # This take only Half Pictures from Folder
             img = data[item_2]
             img = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
             SP = Noise.noisy("s&p", img)  # Color S&P
@@ -153,7 +153,7 @@ def create_noise(data):
         take_even_file += 1
     # Now take Salt and Paper Noise on 46 Picture and Total Image Array = 92(Data)
     for item_3 in range(len(data)):
-        if take_even_file % 2 != 0:
+        if take_even_file % 3 == 2:
             img = data[item_3]
             img = cv.cvtColor(img, cv.COLOR_GRAY2BGR)
             gauss = Noise.noisy("gauss", img)

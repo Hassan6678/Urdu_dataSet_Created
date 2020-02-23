@@ -11,17 +11,20 @@ def main():
     #     sys.exit(1)
 
     # dirName = sys.argv[1]
-    dirName = "Haa"
+    dirName = "Data_set"
     desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
     path = os.path.join(desktop, dirName)
 
     Directory.Dir(dirName, names)
     for img in range(len(images)):
         Simple_data = Helper.create_simple(Helper.Convert_white_black(images[img]))
+        print(len(Simple_data))
 
         Noise_data = Helper.create_noise(Simple_data)
+        print(len(Noise_data))
 
         Color_data = Helper.create_color(Noise_data)
+        print(len(Color_data))
 
         folder_name = names[img].split('\\')
         folder_name = folder_name[-1].split('.')
