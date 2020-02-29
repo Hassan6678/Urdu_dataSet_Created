@@ -7,7 +7,7 @@ def Dir(dirName,Folders):
     try:
         # Create target Directory
         os.mkdir(path)
-        print("Directory ", dirName, " Created ")
+        # print("Directory ", dirName, " Created ")
     except FileExistsError:
         pass
         #print("Directory ", dirName, " already exists")
@@ -20,8 +20,9 @@ def Dir(dirName,Folders):
             try:
                 # Create target Directory
                 os.mkdir(folder_path)
-                print("Directory ", folder_name[0].upper(), " Created ")
+                # print("Directory ", folder_name[0].upper(), " Created ")
             except FileExistsError:
-                print("Directory ", folder_name[0], " already exists")
+                pass
+                #print("Directory ", folder_name[0], " already exists")
     else:
         print("Error")

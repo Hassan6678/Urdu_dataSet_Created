@@ -6,9 +6,9 @@ import Color
 import os
 
 def Save_Image(data, path, folder_name):
-    print("Save_funtion")
+    # print("Save_funtion")
     new_path = path + "\\" + folder_name.upper()  # update path
-    print(new_path)
+    # print(new_path)
     if os.path.exists(new_path):
         sequence = 0
         for img in data:
@@ -48,7 +48,7 @@ def Convert_black_white(image):
         return image
 
 def rotation(image, angleInDegrees):
-    print("Rotation_function")
+    # print("Rotation_function")
     h, w = image.shape[:2]
     img_c = (w / 2, h / 2)
 
@@ -67,7 +67,7 @@ def rotation(image, angleInDegrees):
     return outImg
 
 def create_simple(image):
-    print("Simple_funtion")
+    # print("Simple_funtion")
     data = []
     sequence = 0
     min = -45; max = 45
@@ -92,7 +92,7 @@ def create_simple(image):
     return data
 
 def Shear(original_image, angle, shear):
-    print("Shear_funtion")
+    # print("Shear_funtion")
     # Parameters of the affine transform:
     translation = 5
 
@@ -130,7 +130,7 @@ def Shear(original_image, angle, shear):
     return final_image
 
 def create_noise(data):
-    print("NOise_FUntion")
+    # print("NOise_FUntion")
     noisy_data = []
     take_even_file = 0
     # Now take Salt and Paper Noise on 46 Picture and Total Image Array = 92(Data)
@@ -159,7 +159,7 @@ def create_noise(data):
     return noisy_data
 
 def create_color(data):
-    print("Color_funtion")
+    # print("Color_funtion")
     # Now Add Color in Piture
     global color_img
     sequence = 1
